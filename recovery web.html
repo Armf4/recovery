@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+<noscript><style>#ld{display:none!important}</style></noscript>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>กุ๊ก รีไซเคิล · รับซื้อของเก่า กรุงเทพฯ ทุกชนิด</title>
@@ -106,9 +107,108 @@ header.sc{box-shadow:0 6px 18px rgba(0,0,0,.14)}
 @media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 .scene.stack .slide:not(.on){transform:translateX(0) translateZ(-220px) scale(.7);opacity:0}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1!important;transform:none!important}.prog{display:none}}
+
+html.ld-on{overflow:hidden}
+#ld{position:fixed;inset:0;z-index:100;background:radial-gradient(ellipse at 50% 42%,var(--a1),var(--bg) 72%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;transition:opacity .5s,visibility .5s}
+#ld.out{opacity:0;visibility:hidden}
+.ld-svg{width:min(94vw,480px);height:auto;overflow:visible}
+.ld-name{font-family:"Noto Serif Thai",Georgia,serif;font-weight:700;font-size:clamp(22px,6vw,30px);color:var(--green);margin:0;line-height:1.2}
+.ld-cap{margin:0;color:var(--mute);font-size:16px;min-height:1.65em;font-variant-numeric:tabular-nums;text-align:center}
+.ld-bar{width:min(60vw,240px);height:5px;border-radius:99px;background:var(--hair);overflow:hidden}
+.ld-bar i{display:block;height:100%;background:var(--gold);transform-origin:0 50%;transform:scaleX(.04);animation:ldBar 2.6s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes ldBar{to{transform:scaleX(.9)}}
+.ld-p{animation:ldWalk 4s linear infinite}
+.ld-it{animation:ldItem 4s linear infinite}
+.ld-tk{animation:ldTruck 4s ease-out infinite}
+.ld-pl{animation:ldPlat 4s ease-out infinite}
+.ld-nd{transform-box:fill-box;transform-origin:50% 100%;animation:ldNeedle 4s ease-in-out infinite}
+.ld-lcd{animation:ldLcd 4s linear infinite}
+.ld-l1,.ld-l2,.ld-a1,.ld-a2{transform-box:fill-box;transform-origin:50% 0}
+.ld-l1{animation:ldL1 4s ease-in-out infinite}.ld-l2{animation:ldL2 4s ease-in-out infinite}
+.ld-a1{animation:ldA1 4s ease-in-out infinite}.ld-a2{animation:ldA2 4s ease-in-out infinite}
+.ld-pop{animation:ldPop .2s both}
+@keyframes ldPop{from{opacity:0}to{opacity:1}}
+@keyframes ldWalk{0%,6%{transform:translate(40px,162px) scale(1,1)}28%,42%{transform:translate(129px,162px) scale(1,1)}65%,76%{transform:translate(212px,162px) scale(1,1)}77%{transform:translate(212px,162px) scale(-1,1)}98%{transform:translate(40px,162px) scale(-1,1)}100%{transform:translate(40px,162px) scale(1,1)}}
+@keyframes ldItem{0%{transform:translate(62px,153px);opacity:0}3%,6%{transform:translate(62px,153px);opacity:1}10%{transform:translate(82px,110px)}28%{transform:translate(155px,110px)}31%,42%{transform:translate(155px,137px)}46%{transform:translate(169px,110px)}65%{transform:translate(238px,110px);animation-timing-function:ease-out}72%{transform:translate(252px,78px);animation-timing-function:ease-in}77%{transform:translate(var(--lx),var(--ly));opacity:1}78%,100%{transform:translate(var(--lx),var(--ly));opacity:0}}
+@keyframes ldTruck{0%,76%{transform:translateY(0)}78%{transform:translateY(3px)}81%{transform:translateY(-1px)}84%,100%{transform:translateY(0)}}
+@keyframes ldPlat{0%,30%{transform:translateY(0)}32%,43%{transform:translateY(2px)}45%,100%{transform:translateY(0)}}
+@keyframes ldNeedle{0%,30%{transform:rotate(-65deg)}34%{transform:rotate(35deg)}37%{transform:rotate(8deg)}40%{transform:rotate(22deg)}43%{transform:rotate(18deg)}47%,100%{transform:rotate(-65deg)}}
+@keyframes ldLcd{0%,30%{opacity:.25}33%,44%{opacity:1}47%,100%{opacity:.25}}
+@keyframes ldL1{0%{transform:rotate(0deg)}6.0%{transform:rotate(0deg)}11.5%{transform:rotate(24deg)}17.0%{transform:rotate(-24deg)}22.5%{transform:rotate(24deg)}28.0%{transform:rotate(0deg)}42.0%{transform:rotate(0deg)}47.8%{transform:rotate(24deg)}53.5%{transform:rotate(-24deg)}59.2%{transform:rotate(24deg)}65.0%{transform:rotate(0deg)}77.0%{transform:rotate(0deg)}82.2%{transform:rotate(24deg)}87.5%{transform:rotate(-24deg)}92.8%{transform:rotate(24deg)}98.0%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}@keyframes ldL2{0%{transform:rotate(0deg)}6.0%{transform:rotate(0deg)}11.5%{transform:rotate(-24deg)}17.0%{transform:rotate(24deg)}22.5%{transform:rotate(-24deg)}28.0%{transform:rotate(0deg)}42.0%{transform:rotate(0deg)}47.8%{transform:rotate(-24deg)}53.5%{transform:rotate(24deg)}59.2%{transform:rotate(-24deg)}65.0%{transform:rotate(0deg)}77.0%{transform:rotate(0deg)}82.2%{transform:rotate(-24deg)}87.5%{transform:rotate(24deg)}92.8%{transform:rotate(-24deg)}98.0%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}@keyframes ldA2{0%{transform:rotate(0deg)}6.0%{transform:rotate(0deg)}11.5%{transform:rotate(-22deg)}17.0%{transform:rotate(22deg)}22.5%{transform:rotate(-22deg)}28.0%{transform:rotate(0deg)}42.0%{transform:rotate(0deg)}47.8%{transform:rotate(-22deg)}53.5%{transform:rotate(22deg)}59.2%{transform:rotate(-22deg)}65.0%{transform:rotate(0deg)}77.0%{transform:rotate(0deg)}82.2%{transform:rotate(-22deg)}87.5%{transform:rotate(22deg)}92.8%{transform:rotate(-22deg)}98.0%{transform:rotate(0deg)}100%{transform:rotate(0deg)}}@keyframes ldA1{0%{transform:rotate(-35deg)}6%{transform:rotate(-35deg)}10%{transform:rotate(-75deg)}28%{transform:rotate(-75deg)}31%{transform:rotate(-30deg)}40%{transform:rotate(-12deg)}43%{transform:rotate(-12deg)}46%{transform:rotate(-75deg)}65%{transform:rotate(-75deg)}68%{transform:rotate(-125deg)}72%{transform:rotate(-35deg)}77%{transform:rotate(5deg)}98%{transform:rotate(5deg)}100%{transform:rotate(-35deg)}}
+@media(prefers-reduced-motion:reduce){#ldIt,.ld-p{display:none}}
 </style>
 </head>
 <body>
+<div id="ld" role="status" aria-label="กำลังโหลดหน้าเว็บ">
+<svg class="ld-svg" viewBox="0 0 380 190" aria-hidden="true"><defs>
+<g id="ld-sk0"><path d="M-10 9C-13 0-9-6-4-8L-5-11H5L4-8C9-6 13 0 10 9Z" fill="#cfae72" stroke="#8a6a35" stroke-width="1.2" stroke-linejoin="round"/><path d="M-5-8Q0-5 5-8" fill="none" stroke="#8a6a35" stroke-width="1.2"/></g>
+<g id="ld-sk1"><rect x="-11" y="-9" width="22" height="18" rx="1.5" fill="#d2a164" stroke="#8d6531" stroke-width="1.2"/><rect x="-3" y="-9" width="6" height="18" fill="#ecca95"/></g>
+<g id="ld-sk2"><rect x="-8" y="-9" width="4" height="8" rx="1.5" fill="#cfe9f5" stroke="#7fb2c9" stroke-width=".8"/><rect x="-2" y="-9" width="4" height="8" rx="1.5" fill="#cfe9f5" stroke="#7fb2c9" stroke-width=".8"/><rect x="4" y="-9" width="4" height="8" rx="1.5" fill="#cfe9f5" stroke="#7fb2c9" stroke-width=".8"/><rect x="-11" y="-3" width="22" height="12" rx="2" fill="#2f8f5a" stroke="#14532d" stroke-width="1.2"/></g>
+</defs>
+<rect x="0" y="162" width="380" height="3" rx="1.5" style="fill:var(--hair)"/>
+<use href="#ld-sk1" transform="translate(16,153)"/><use href="#ld-sk2" transform="translate(38,153)"/><use href="#ld-sk0" transform="translate(27,135)"/>
+<g class="ld-tk">
+<rect x="300" y="112" width="6" height="24" fill="#8f1717"/>
+<g id="ldBed"></g>
+<rect x="232" y="128" width="74" height="18" fill="#d92b2b" stroke="#7a1212" stroke-width="1.2"/><rect x="230" y="125" width="78" height="4" rx="1.5" fill="#b01f1f"/><rect x="229" y="112" width="5" height="34" rx="1.5" fill="#b01f1f"/>
+<g stroke="#1a1a1a" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M235 128V92H304V128"/><path d="M235 110H304" stroke-width="2.4"/><path d="M304 92L292 110" stroke-width="2.4"/></g>
+<rect x="231" y="146" width="123" height="4" rx="1.5" fill="#222"/>
+<path d="M306 146V98Q306 93 311 93H338Q343 93 345 98L353 124Q356 126 356 130V146Z" fill="#d92b2b" stroke="#7a1212" stroke-width="1.2" stroke-linejoin="round"/>
+<path d="M312 99H336L343 118H312Z" fill="#cfe8f7"/><path d="M326 120V145" stroke="#7a1212" stroke-width="1.2"/><rect x="318" y="127" width="5" height="2" rx="1" fill="#7a1212"/><rect x="342" y="108" width="3" height="8" rx="1" fill="#1a1a1a"/>
+<circle cx="352" cy="131" r="3" fill="#ffe58a"/><rect x="349" y="140" width="10" height="5" rx="1.5" fill="#1a1a1a"/><path d="M308 137H355" stroke="#fff" stroke-opacity=".75" stroke-width="2"/>
+<path d="M249 150a13 13 0 0 1 26 0zM324 150a13 13 0 0 1 26 0z" fill="#2b0707"/>
+<circle cx="262" cy="151" r="11" fill="#22312a"/><circle cx="262" cy="151" r="4.5" fill="#cdd6d1"/><circle cx="337" cy="151" r="11" fill="#22312a"/><circle cx="337" cy="151" r="4.5" fill="#cdd6d1"/>
+</g>
+<g class="ld-pl"><rect x="130" y="146" width="50" height="6" rx="2" fill="#c9d3cd"/></g>
+<rect x="134" y="152" width="46" height="10" rx="2" fill="#6d7a73"/><rect x="178" y="62" width="22" height="100" rx="4" fill="#6d7a73"/>
+<rect x="180" y="66" width="18" height="10" rx="2" fill="#14301f"/><text class="ld-lcd" id="ldWt" x="189" y="74" text-anchor="middle" font-size="7" font-family="monospace" fill="#9ff0b0">0.0</text>
+<circle cx="189" cy="96" r="11" fill="#fff" stroke="#44524a" stroke-width="1.2"/><path d="M181 98A9 9 0 0 1 197 98" fill="none" stroke="#9aa7a0" stroke-dasharray="1.5 2.5"/>
+<line class="ld-nd" x1="189" y1="96" x2="189" y2="87" stroke="#d33" stroke-width="1.8" stroke-linecap="round"/><circle cx="189" cy="96" r="2" fill="#44524a"/>
+<g class="ld-p">
+<g class="ld-a2"><rect x="-3" y="-60" width="6" height="24" rx="3" fill="#c97f14"/><circle cx="0" cy="-35" r="3.6" fill="#e0b070"/></g>
+<g class="ld-l2"><rect x="-3.5" y="-36" width="7" height="36" rx="3.5" fill="#3b4a63"/><rect x="-3.5" y="-4" width="11" height="4" rx="2" fill="#1e293b"/></g>
+<g class="ld-l1"><rect x="-3.5" y="-36" width="7" height="36" rx="3.5" fill="#46577a"/><rect x="-3.5" y="-4" width="11" height="4" rx="2" fill="#1e293b"/></g>
+<rect x="-9" y="-64" width="18" height="30" rx="7" fill="#f59e0b"/><rect x="-9" y="-49" width="18" height="3" fill="#fff7d6"/>
+<circle cx="1" cy="-73" r="9" fill="#f1c27d"/><path d="M-8-76a9 9 0 0 1 18 0z" fill="#12803a"/><rect x="7" y="-77" width="8" height="3" rx="1.5" fill="#0f6b30"/><circle cx="5" cy="-72" r="1.3" fill="#222"/>
+<g class="ld-a1"><rect x="-3" y="-60" width="6" height="24" rx="3" fill="#f59e0b"/><circle cx="0" cy="-35" r="3.6" fill="#f1c27d"/></g>
+</g>
+<use id="ldIt" class="ld-it" href="#ld-sk0"/>
+</svg>
+<p class="ld-name">กุ๊ก รีไซเคิล</p>
+<p class="ld-cap" id="ldCap" aria-hidden="true">กำลังชั่งของขึ้นรถ…</p>
+<div class="ld-bar"><i id="ldBar"></i></div>
+</div>
+<script>
+(function(){
+var d=document,h=d.documentElement,L=d.getElementById("ld"),it=d.getElementById("ldIt"),bed=d.getElementById("ldBed"),wt=d.getElementById("ldWt"),cap=d.getElementById("ldCap"),bar=d.getElementById("ldBar"),
+P=[[250,127],[275,127],[262,108]],K=0,N=0,T=0,t0=Date.now(),done=false;
+h.classList.add("ld-on");
+function start(){
+  var s=K%3,x=P[s],w=+(6+Math.random()*30).toFixed(1);
+  if(s===0){bed.textContent="";N=0;T=0}
+  it.setAttribute("href","#ld-sk"+s);
+  it.style.setProperty("--lx",x[0]+"px");it.style.setProperty("--ly",x[1]+"px");
+  wt.textContent=w.toFixed(1);
+  setTimeout(function(){
+    if(done)return;
+    var u=d.createElementNS("http://www.w3.org/2000/svg","use");
+    u.setAttribute("href","#ld-sk"+s);u.setAttribute("class","ld-pop");u.style.transform="translate("+x[0]+"px,"+x[1]+"px)";
+    bed.appendChild(u);N++;T+=w;
+    cap.textContent="ขึ้นรถแล้ว "+N+" ชิ้น · รวม "+T.toFixed(1)+" กก.";
+  },3100);
+  K++;
+}
+it.addEventListener("animationiteration",start);start();
+function hide(){
+  if(done)return;done=true;
+  bar.style.animation="none";bar.style.transform="scaleX(1)";
+  setTimeout(function(){L.classList.add("out");h.classList.remove("ld-on");setTimeout(function(){L.remove()},600)},180);
+}
+function ready(){setTimeout(hide,Math.max(0,2600-(Date.now()-t0)))}
+if(d.readyState==="complete")ready();else addEventListener("load",ready);
+setTimeout(hide,9000);
+})();
+</script>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <linearGradient id="gCu"><stop offset="0" stop-color="#6f3216"/><stop offset=".35" stop-color="#e9a56f"/><stop offset=".5" stop-color="#f6c9a0"/><stop offset=".75" stop-color="#b8602c"/><stop offset="1" stop-color="#5e2a12"/></linearGradient>
 <linearGradient id="gBr"><stop offset="0" stop-color="#7a5a14"/><stop offset=".35" stop-color="#e0bd55"/><stop offset=".5" stop-color="#fbe8a3"/><stop offset=".75" stop-color="#c49a2d"/><stop offset="1" stop-color="#6e4f10"/></linearGradient>
