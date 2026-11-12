@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guk-recovery.vercel.app/sitemap.xml

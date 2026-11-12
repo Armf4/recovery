@@ -1,5 +1,0 @@
-{
-  "routes": [
-    { "src": "/", "destination": "recovery web.html" }
-  ]
-}
